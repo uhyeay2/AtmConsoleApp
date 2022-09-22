@@ -16,13 +16,13 @@ namespace ATMConsoleApplication
 
         public User(double balance, int pin, string firstName, string lastName)
         {
+            Random rnd = new Random();
+            _cardNum = rnd.Next(10000000, 1000000000);
             _balance = balance;
             _pin = pin;
 
             FirstName = firstName;
             LastName = lastName;
-
-            BankAccounts.newUsers.Add(this);
 
         }
 

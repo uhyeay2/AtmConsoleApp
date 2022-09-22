@@ -3,11 +3,16 @@ namespace ATMConsoleApplication
 {
     public class BankAccounts
     {
-        public static List<User> newUsers;
+        private List<User> _newUsers;
 
         public BankAccounts()
         {
-            newUsers = new List<User>();
+            _newUsers = new List<User>();
+        }
+
+        public void AddNewUserToList(User newUser)
+        {
+            _newUsers.Add(newUser);
         }
     }
 }
