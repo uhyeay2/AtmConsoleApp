@@ -1,0 +1,4 @@
+﻿using ATMConsoleApplication;
+
+ATM.Run();
+
