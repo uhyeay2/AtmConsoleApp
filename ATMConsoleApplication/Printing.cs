@@ -27,8 +27,10 @@ namespace ATMConsoleApplication
         public static void InvalidSelection()
         {
             Title();
+            ConsoleColor previousColor = ForegroundColor;
+            ForegroundColor = ConsoleColor.Red;
             WriteLine("\n> Plesase Enter a Valid Selection! ");
-
+            ForegroundColor = previousColor;
             Write("\n> Press Enter to Continue. ");
             ReadKey();
         }
