@@ -2,7 +2,7 @@
 {
     public abstract class Transaction
     {
-        public Transaction(double amount, string accountNumber)
+        public Transaction(double amount, )
         {
             Amount = amount;
             AccountNumber = accountNumber;
