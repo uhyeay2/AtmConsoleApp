@@ -1,45 +1,28 @@
-﻿using System;
+﻿using ATMConsoleApplication.Accounts;
+
 namespace ATMConsoleApplication
 {
     public class User
     {
-        private int _accountNumber;
-        private double _balance;
+        private int MemberId;
+
         private int _pin;
 
-
         public string FirstName { get; set; }
+        
         public string LastName { get; set; }
 
+        private List<Account> Accounts { get; set; } = new List<Account>(); 
 
-
-
-        public User(string firstName, string lastName, double balance, int pin)
+        public User(string firstName, string lastName, int memberId, int pin)
         {
-            Random rnd = new Random();
-            _accountNumber = rnd.Next(10000000, 1000000000);
-            _balance = balance;
             _pin = pin;
-
+            MemberId = memberId;
             FirstName = firstName;
             LastName = lastName;
-
         }
 
-        public int GetUserCardNum()
-        {
-            return _accountNumber;
-        }
-
-        public double GetUserBalance()
-        {
-            return _balance;
-        }
-
-        public int GetUserPin()
-        {
-            return _pin;
-        }
+        public void AddNewAccount(Account account) => Accounts.Add(account);
 
     }
 }
