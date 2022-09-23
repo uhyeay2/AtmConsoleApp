@@ -17,7 +17,7 @@ namespace ATMConsoleApplication
 
         public static void AtmSelection()
         {
-            Console.WriteLine("Please select one of the following options...");
+            WriteLine("Please select one of the following options...");
             Console.WriteLine("1. Deposit");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Show Balance");
